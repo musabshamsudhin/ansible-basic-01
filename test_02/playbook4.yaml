@@ -1,0 +1,7 @@
+- name: Pull an image
+  hosts: localhost
+  tasks:
+    - name: Pull centos-7 image
+      community.docker.docker_image:
+        name: nginx:latest
+        source: pull

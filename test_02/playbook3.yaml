@@ -1,0 +1,7 @@
+---
+- name: Pull a Docker image on the remote server
+  hosts: remote_server
+  tasks:
+    - name: Pull nginx Docker image
+      command: docker pull nginx:latest
+

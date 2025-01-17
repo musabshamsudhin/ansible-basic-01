@@ -1,0 +1,17 @@
+---
+- name: Create folders inside /home on the control node
+  hosts: localhost
+  tasks:
+    - name: Create base directory for testing
+      ansible.builtin.file:
+        path: /home/test_folder
+        state: directory
+
+    - name: Create subfolders inside /home/test_folder
+      ansible.builtin.file:
+        path: /home/test_folder/{{ item }}
+        state: directory
+      loop:
+        - folder1
+        - folder2
+

@@ -1,0 +1,6 @@
+all:
+  hosts:
+    remote_server:
+      ansible_host: 10.0.15.163
+      ansible_user: musab
+
